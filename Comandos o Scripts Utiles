@@ -1,0 +1,6 @@
+#Añadir mensaje a la ventana de bloqueo / Inicio de sesión.
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Este dispositivo es de uso personal y provisto por Decskill, en caso de encontrarlo, por favor escribir a manuel.rangel@gmail.com"
+
+#Eliminar el mensaje de la ventana de bloqueo / Inicio de sesión.
+sudo defaults delete /Library/Preferences/com.apple.loginwindow LoginwindowText
+

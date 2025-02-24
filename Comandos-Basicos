@@ -1,0 +1,35 @@
+
+Comando	                                    Acción
+/	                                        Directorio raíz
+.	                                        Directorio de trabajo actual
+..	                                        Padre del directorio de trabajo actual
+~	                                        Carpeta de inicio del usuario conectado
+sudo [command]	                            Ejecutar el comando actual con privilegios de seguridad de superusuario
+nano [file]	                                Abrir el editor Terminal
+open [file]	                                Abrir un archivo especificado
+[command] -h	                            Abrir la ayuda de un comando específico
+man [command]	                            Acceder al manual de ayuda de un comando específico
+exit	                                    Finalizar la sesión de shell actual
+cd	                                        Navegar de un directorio a otro
+cd [folder]	                                Cambiar el directorio a una nueva carpeta especificada
+cd ~	                                    Navegar al directorio personal del usuario conectado
+cd /	                                    Navegue hasta el directorio raíz
+cd -	                                    Navegue hasta el último directorio que abrió
+pwd	                                        Mostrar el directorio de trabajo actual
+cd ..	                                    Navegar hasta el directorio padre del directorio actual
+cd ../..	                                Navegar hacia arriba dos directores padres desde el actual
+cp -r [directory] [destination-path]	    Para copiar directorios
+mv [directory] [destination-path]	        Para mover directorios
+rm -r [directory]	                        Para eliminar directorios
+ls	                                        Mostrar todos los nombres de archivos y subdirectorios del directorio actual
+ls -C	                                    Mostrar listado en multicolumna forzada
+ls -a	                                    Enumere todas las entradas, incluidas . y .. directorios
+ls -1	                                    Mostrar la lista de archivos en formato de una entrada por línea
+ls -F	                                    Organizar la salida con una barra / después de las rutas de los directorios, asterisco * después de programas y guiones, en @ después de enlaces simbólicos
+ls -S	                                    Organizar archivos y entradas por tamaño
+ls -l	                                    Listas largas con: propietario del archivo, nombre del grupo, modo, fecha, hora, rutas y mucho más.
+ls -l /	                                    Lista de enlaces simbólicos del sistema de archivos desde la raíz
+ls -lt	                                    Ficheros ordenados por fecha, primero los modificados más recientemente
+ls -lh	                                    Lista larga organizada por tamaño de archivo legible en KB, MB o GB
+ls -lo	                                    Lista organizada por nombres de archivo con el tamaño del archivo, el propietario y cualquier bandera
+ls -la	                                    Lista detallada del contenido de un directorio, incluidos los archivos ocultos
