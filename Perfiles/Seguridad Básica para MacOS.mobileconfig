@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>Este perfil hace parte de un proceso de capacitación y pruebas, puede usarse como base para crear nuevas configuraciones.</string>
+	</dict>
+	<key>HasRemovalPasscode</key>
+	<true/>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DisabledPreferencePanes</key>
+			<array>
+				<string>com.apple.preference.startupdisk</string>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures System Preferences settings</string>
+			<key>PayloadDisplayName</key>
+			<string>System Preferences #1</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.systempreferences.1B00B1CC-34B8-4F72-AE54-BAA7850C77B1</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.systempreferences</string>
+			<key>PayloadUUID</key>
+			<string>1B00B1CC-34B8-4F72-AE54-BAA7850C77B1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>EnableFirewall</key>
+			<true/>
+			<key>LoggingOption</key>
+			<string>brief</string>
+			<key>PayloadDescription</key>
+			<string></string>
+			<key>PayloadDisplayName</key>
+			<string>Firewall #1</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.firewall.B92984F4-37B4-43D9-AFCE-1B1168BD1CD1</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.security.firewall</string>
+			<key>PayloadUUID</key>
+			<string>B92984F4-37B4-43D9-AFCE-1B1168BD1CD1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Screensaver settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Screensaver</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.screensaver.8708C207-59B1-4CFD-9342-1F5B6C0FC73E</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.screensaver</string>
+			<key>PayloadUUID</key>
+			<string>8708C207-59B1-4CFD-9342-1F5B6C0FC73E</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>askForPassword</key>
+			<true/>
+			<key>askForPasswordDelay</key>
+			<integer>300</integer>
+			<key>moduleName</key>
+			<string>Flurry</string>
+		</dict>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Use this section to define passcode policy settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Passcode</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mobiledevice.passwordpolicy.A24F1E7F-C3E9-417B-B14E-AC98A3B43B48</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.mobiledevice.passwordpolicy</string>
+			<key>PayloadUUID</key>
+			<string>A24F1E7F-C3E9-417B-B14E-AC98A3B43B48</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>maxInactivity</key>
+			<integer>5</integer>
+			<key>minComplexChars</key>
+			<integer>1</integer>
+			<key>minLength</key>
+			<integer>8</integer>
+			<key>requireAlphanumeric</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Configures Security settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Security</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.C96D2FA6-B49C-421F-8021-448E22EEBBE1</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.security</string>
+			<key>PayloadUUID</key>
+			<string>C96D2FA6-B49C-421F-8021-448E22EEBBE1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Profile Removal</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.profileRemovalPassword.42ADF553-E658-4E52-92ED-196C9B8883DB</string>
+			<key>PayloadType</key>
+			<string>com.apple.profileRemovalPassword</string>
+			<key>PayloadUUID</key>
+			<string>42ADF553-E658-4E52-92ED-196C9B8883DB</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>RemovalPassword</key>
+			<string>M43rr4t1!</string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Seguridad Básica para MacOS 
+- Contraseña - min. 8 caracteres - min 1 complejo
+- Autobloqueo 5min
+- Requerir contraseña
+
+Otros
+- Mac Firewall habilitado con registros
+- Rehabilitar gatekeeper automaticamente
+- Desabilitar la opción de seleccionar disco de arranque desde el panel de configuración.</string>
+	<key>PayloadDisplayName</key>
+	<string>Seguridad Básica para MacOS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.seguridad.basica.macos</string>
+	<key>PayloadOrganization</key>
+	<string>github.com/m4nu3R</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>com.seguridad.basica.macos</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>2025-03-21T15:37:24Z</date>
+	<key>TargetDeviceType</key>
+	<integer>5</integer>
+</dict>
+</plist>
