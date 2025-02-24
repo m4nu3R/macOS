@@ -1,4 +1,6 @@
-
+############################################
+#### CONCEPTOS BÁSICOS DE COMANDOS      ####
+############################################
 Comando	                                    Acción
 /	                                        Directorio raíz
 .	                                        Directorio de trabajo actual
@@ -10,6 +12,10 @@ open [file]	                                Abrir un archivo especificado
 [command] -h	                            Abrir la ayuda de un comando específico
 man [command]	                            Acceder al manual de ayuda de un comando específico
 exit	                                    Finalizar la sesión de shell actual
+
+############################################
+####         CAMBIAR DE DIRECTORIO      ####
+############################################
 cd	                                        Navegar de un directorio a otro
 cd [folder]	                                Cambiar el directorio a una nueva carpeta especificada
 cd ~	                                    Navegar al directorio personal del usuario conectado
@@ -21,6 +27,10 @@ cd ../..	                                Navegar hacia arriba dos directores pad
 cp -r [directory] [destination-path]	    Para copiar directorios
 mv [directory] [destination-path]	        Para mover directorios
 rm -r [directory]	                        Para eliminar directorios
+
+############################################
+#### LISTAR CONTENIDOS DE UN DIRECTORIO ####
+############################################
 ls	                                        Mostrar todos los nombres de archivos y subdirectorios del directorio actual
 ls -C	                                    Mostrar listado en multicolumna forzada
 ls -a	                                    Enumere todas las entradas, incluidas . y .. directorios
@@ -33,3 +43,70 @@ ls -lt	                                    Ficheros ordenados por fecha, primero
 ls -lh	                                    Lista larga organizada por tamaño de archivo legible en KB, MB o GB
 ls -lo	                                    Lista organizada por nombres de archivo con el tamaño del archivo, el propietario y cualquier bandera
 ls -la	                                    Lista detallada del contenido de un directorio, incluidos los archivos ocultos
+
+############################################
+## TAMAÑO DE ARCHIVOS Y ESPACIO EN DISCO  ##
+############################################
+du	                                        Lista que muestra el uso de cada subdirectorio y su contenido
+df -h	                                    Muestra el espacio libre en disco de tu sistema
+df -H	                                    Muestra el espacio libre en disco del sistema en potencias de 1.000 en lugar de 1.024
+du -sh [folder]	                            Mostrar una salida legible por humanos de los archivos de un directorio
+du -s	                                    Listar entradas de archivos específicos
+du -sk * | sort -nr	                        Muestra todos los archivos y carpetas con el tamaño total, incluidas las subcarpetas, en KB; utilice sm en lugar de sk para obtener el tamaño del directorio en MB.
+du -k	                                    Para ver el tamaño del archivo en kilobytes
+
+############################################
+#### GESTIÓN DE ARCHIVOS Y DIRECTORIOS  ####
+############################################
+mkdir <dir>	                                Generar una nueva carpeta con el nombre <dir>
+mkdir -p <dir>/<dir	                        Generar carpetas anidadas
+mkdir <dir1> <dir2> <dir3>	                Crea varias carpetas a la vez, sin anidarlas
+mkdir "<dir>"	                            Generar una carpeta con un espacio en el nombre del archivo
+rmdir <dir>	                                Borrar una carpeta vacía; no funciona para carpetas con contenido
+rm -R <dir>	                                Borrar una carpeta y su contenido
+touch <file>	                            Generar un nuevo archivo sin especificar la extensión
+cp <file> <dir>	                            Duplicar un archivo en una carpeta especificada
+cp <file> <newfile>	                        Duplicar un archivo en la carpeta actualmente en uso
+cp <file> ~/<dir>/<newfile>	                Duplicar y renombrar un archivo en una carpeta especificada
+cp -R <dir> "<new dir>"	                    Duplicar una carpeta en una nueva carpeta especificada cuando hay espacios en el nombre del archivo
+cp -i <file> <dir>	                        Proporcionar un mensaje de advertencia antes de copiar un archivo con respecto a la sobrescritura
+cp <file1> <file2> <file3> /Users/<dir>	    Duplicar varios archivos en una sola carpeta
+cp [path-to-file] [destination-path]	    Para copiar un fichero en un directorio
+ditto -V [folder path] [new folder]	        Duplicar el contenido de una carpeta en una nueva carpeta especificada V imprime un estado de línea para todos los archivos copiados
+rm <file>	                                Borrar definitivamente un fichero: precaución al utilizar este comando
+rm -i <file>	                            Pedir confirmación antes de borrar un fichero
+rm -f <file>	                            Eliminar a la fuerza un archivo sin necesidad de confirmación
+rm <file1> <file2> <file3>	                Eliminar varios archivos a la vez sin necesidad de confirmación
+mv <file> <newfilename>	                    Mover la ubicación de un archivo y renombrarlo
+mv <file> <dir>	                            Reubicar un archivo en una nueva carpeta; permite la posible sobrescritura de archivos existentes.
+mv -i <file> <dir>	                        Añada un -i aviso de bandera antes de sobrescribir archivos
+mv *.png ~/<dir>	                        Reubicar archivos con extensión PNG de la carpeta actual a otra nueva
+
+############################################
+####         HISTORIAL DE COMANDOS      ####
+############################################
+Ctrl + R	                                Realizar una búsqueda en comandos anteriores
+history n	                                Mostrar los comandos escritos anteriormente; añadir un valor a n para limitar los elementos mostrados
+![value]	                                Ejecutar el último común escrito que empiece por un valor
+!!	                                        Ejecutar el último comando escrito
+
+############################################
+#### PERMISOS A NIVEL DE ARCHIVOS       ####
+############################################
+ls -ld	                                    Mostrar los permisos por defecto de un directorio personal
+ls -ld <dir>	                            Mostrar los permisos de lectura, escritura y acceso de una carpeta
+chmod 755 <file>	                        Revisar el permiso de un archivo a 755
+chmod -R 600 <dir>	                        Revisar tanto una carpeta como su contenido permiso a 600
+chown <user>:<group> <file>	                Cambiar la propiedad de un archivo a un nuevo usuario y grupo; la adición de -R incluirá el contenido de la carpeta en el cambio
+chmod [number] [filename]	                Para cambiar los permisos de lectura y escritura de un fichero
+
+############################################
+#### GESTIÓN DE PROCESOS       ####
+############################################
+ps -ax	                                    Mostrar los procesos en ejecución; a procesos de visualización de todos los usuarios; x visualizar los procesos desconectados con el Terminal
+ps -aux	                                    Mostrar procesos con %cpu, %mem, page in, PID y comando
+top	                                        Mostrar información relevante en tiempo real sobre los procesos en ejecución
+top -ocpu -s 5	                            Obtenga una actualización cada 5 segundos de los procesos ordenados por uso de CPU
+top -o rsize	                            Mostrar una lista de procesos ordenados por uso de memoria
+kill PID	                                Salir de todos los procesos con el ID PID; ver el PID como una columna en el Monitor de Actividad.
+ps -ax | grep <appname>	                    Localizar procesos por nombre o PID
