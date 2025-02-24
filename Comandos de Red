@@ -5,7 +5,7 @@ ping <host>	                            Hacer ping al estado de la pantalla y al
 whois <domain>	                        Mostrar el whois de un dominio especificado
 curl -O <url/to/file>	                  Descargar un archivo seleccionado con HTTP, HTTPS o FTP
 ssh <username>@<host>	                  Crear una conexión SSH desde un host with un usuario designado con username
-scp <file> <user>@<host>:/remote/path	Copiar una file a un remoto host
+scp <file> <user>@<host>:/remote/path	  Copiar una file a un remoto host
 arp -a	                                Muestra una lista de tus dispositivos de red local con direcciones IP y MAC
 ifconfig en0	                          Muestra la dirección IP y MAC de tu propio dispositivo
 traceroute [hostname]	                  Vea la ruta y los saltos cuando los paquetes atraviesan desde su dispositivo hasta una dirección designada (Equivalente a tracert en Windows)
