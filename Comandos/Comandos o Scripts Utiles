@@ -4,5 +4,3 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "
 #Eliminar el mensaje de la ventana de bloqueo / Inicio de sesión.
 sudo defaults delete /Library/Preferences/com.apple.loginwindow LoginwindowText
 
-#Mostrar la vaca que habla en terminal
-cowsay [palabras]	Muestra una vaca que habla
