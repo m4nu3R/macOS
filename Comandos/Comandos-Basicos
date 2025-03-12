@@ -110,3 +110,6 @@ top -ocpu -s 5	                            Obtenga una actualización cada 5 seg
 top -o rsize	                            Mostrar una lista de procesos ordenados por uso de memoria
 kill PID	                                Salir de todos los procesos con el ID PID; ver el PID como una columna en el Monitor de Actividad.
 ps -ax | grep <appname>	                    Localizar procesos por nombre o PID
+
+Reinicio de servicios:
+sudo killall VDCAssistant
