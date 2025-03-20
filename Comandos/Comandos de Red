@@ -11,3 +11,19 @@ ifconfig en0	                          Muestra la dirección IP y MAC de tu prop
 traceroute [hostname]	                  Vea la ruta y los saltos cuando los paquetes atraviesan desde su dispositivo hasta una dirección designada (Equivalente a tracert en Windows)
 wget [id_dominio]	                      Descarga el archivo o recurso de esa IP o dominio
 netstat -i	                            Muestra las interfaces de red y su estado
+ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active' Muestra interfaces activas
+networksetup -listallhardwareports      Muestra interfaces con información.
+networksetup -getinfo HardwarePort      Obtener más información de una interfaz.
+networksetup -getinfo Wi-Fi             Ejemplo para la Wi-Fi
+scutil --nwi                            Otra via para obtener información.
+nslookup nombreDominio_o_direccionIP    Realizar una revision de dominio o IP
+nslookup -type=MX testing.com           Revisar registros MX de un dominio
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder       Flush DNS (Version actual)
+sudo killall -HUP mDNSResponder         Versiones antiguas macOS
+curl grupocox.com -I                    Comprobar funcionamiento página web.  
+
+
+
+
+
+
