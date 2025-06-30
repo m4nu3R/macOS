@@ -12,11 +12,11 @@ usuarios="$(dscl . list /Users | grep -v '_')"
 #Revisiones
 
 #Revisa que si está en el dominio.
-#check4AD=$(/usr/bin/dscl localhost -list . | grep "Active Directory")
-#if [ "${check4AD}" != "Active Directory" ]; then
-#    echo "Este ordenador no está añadido al dominio, revisa el estado. "
-#    exit 1
-#fi
+check4AD=$(/usr/bin/dscl localhost -list . | grep "Active Directory")
+if [ "${check4AD}" != "Active Directory" ]; then
+    echo "Este ordenador no está añadido al dominio, revisa el estado. "
+    exit 1
+fi
 
 #Mensajes iniciales para confirmación del proceso
 echo "El usuario iniciado es": $usuario
